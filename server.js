@@ -32,13 +32,13 @@ app.get('/api/:name', (req, res) => {
         res.json(rappers[rapperName])
     }else {
         res.json(rappers['unknown'])
-    }
+    } 
     
 })
 
 // use query parameter to get rapper
 
 // make port
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log(`the server is running on ${PORT}! you should go catch it`)
 })
